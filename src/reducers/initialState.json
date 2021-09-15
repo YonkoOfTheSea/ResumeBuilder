@@ -1,0 +1,20 @@
+{
+    "document": {
+        "id": null,
+        "skinCd": ""
+    },
+    "projectsSection":{
+    },
+    "additionalSection":{
+    },
+    "skillsSection":{
+    },
+    "educationSection": {
+    },
+    "contactSection": {       
+    },
+    "auth":{
+        "ErrorMessage":"",
+        "loading":false
+    }
+}
