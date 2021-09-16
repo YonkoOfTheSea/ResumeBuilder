@@ -40,6 +40,26 @@ const data = {
     gradYear: "1987",
     additional: "magna cum laude (GPA 3.95)",
   },
+  project: {
+    project1: "Bilzabas Steel",
+    link1: "Salt Lake City, UT, USA",
+    start1: "Jan/2015",
+    end1: "Apr/2020",
+    desc1: [
+      "Responsible for all the material handled by blablabla.",
+      "Help others on their daily tasks.",
+      "Professional photographer hired by others companies.",
+    ],
+    project2: "GumGum Productions",
+    link2: "https://",
+    start2: "Jul/2012",
+    end2: "Dec/2014",
+    desc2: [
+      "Print and fax documents for the entire company.",
+      "Assist CEO on daily tasks.",
+      "Provide assistance to all employees.",
+    ],
+  },
   additional: [
     "5+ years of experience with Microsoft Office",
     "English and Spanish speaker",
@@ -47,6 +67,7 @@ const data = {
     "Interpersonal Communication",
     "Friend of all",
   ],
+ 
 };
 
 export default data;

@@ -24,9 +24,9 @@ img {
 
 .topLeft {
   display: flex;
-  padding: 15px;
+  padding: 5px;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .headerLeft {

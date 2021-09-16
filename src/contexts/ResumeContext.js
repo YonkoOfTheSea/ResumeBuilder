@@ -10,6 +10,7 @@ const ResumeContextProvider = (props) => {
       header: {},
       professional: { desc1: ["", "", ""], desc2: ["", "", ""] },
       education: {},
+      project: { desc1: ["", "", ""], desc2: ["", "", ""] },
       additional: [],
     }
   );
@@ -31,6 +32,10 @@ const ResumeContextProvider = (props) => {
     setContent({ ...content, education: data });
   }
 
+  function updateProjectData(data) {
+    setContent({ ...content, project: data });
+  }
+
   function updateAdditionalData(data) {
     setContent({ ...content, additional: Object.values(data) }); //Converting the object to an Array in order to iterate in AdditionalSkillsP.js
   }
@@ -46,6 +51,7 @@ const ResumeContextProvider = (props) => {
       header: {},
       professional: { desc1: ["", "", ""], desc2: ["", "", ""] },
       education: {},
+      project: { desc1: ["", "", ""], desc2: ["", "", ""] },
       additional: [],
     });
   }
@@ -64,6 +70,7 @@ const ResumeContextProvider = (props) => {
         updateProfessionalData,
         updateEducationData,
         updateAdditionalData,
+        updateProjectData,
         addFakeData,
         removeFakeData,
       }}
