@@ -9,7 +9,7 @@ function Professional() {
   const { content, updateProfessionalData, removeFakeData } = useContext(
     ResumeContext
   );
-  const [btnText, setBtnText] = useState("Add");
+  const [btnText, setBtnText] = useState("Save");
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
@@ -17,6 +17,13 @@ function Professional() {
     updateProfessionalData(data);
     setBtnText("Update");
   };
+
+  const [flag, setFlag] = useState(true);
+
+  const handleClick = () => {
+    setFlag(!flag);
+  };
+
   return (
     <div className="">
       <h2>Professional Experience</h2>
@@ -62,7 +69,7 @@ function Professional() {
 
         <TextField
           id="outlined-basic"
-          label="Start MM/YYYY"
+          label="Start Date"
           name="start1"
           variant="outlined"
           defaultValue={content.professional.start1}
@@ -73,7 +80,7 @@ function Professional() {
 
         <TextField
           id="outlined-basic"
-          label="End MM/YYYY"
+          label="End Date"
           name="end1"
           variant="outlined"
           defaultValue={content.professional.end1}
@@ -85,39 +92,16 @@ function Professional() {
         <TextField
           id="outlined-basic"
           label="Description"
-          name="desc1[0]"
+          name="desc1"
           variant="outlined"
-          defaultValue={content.professional.desc1[0]}
+          multiline
+          rows={7}
+          defaultValue={content.professional.desc1}
           inputRef={register}
           // onChange={handleSubmit(onSubmit)}
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
         />
-        <TextField
-          id="outlined-basic"
-          label="Description"
-          name="desc1[1]"
-          variant="outlined"
-          defaultValue={content.professional.desc1[1]}
-          inputRef={register}
-          // onChange={handleSubmit(onSubmit)}
-          style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Description"
-          name="desc1[2]"
-          variant="outlined"
-          defaultValue={content.professional.desc1[2]}
-          inputRef={register}
-          // onChange={handleSubmit(onSubmit)}
-          style={{
-            marginTop: 12,
-            marginLeft: 8,
-            marginRight: 8,
-            marginBottom: 15,
-          }}
-        />
-
+        
         <hr />
 
         <h4>Company 2</h4>
@@ -157,7 +141,7 @@ function Professional() {
 
         <TextField
           id="outlined-basic"
-          label="Start MM/YYYY"
+          label="Start Date"
           name="start2"
           variant="outlined"
           defaultValue={content.professional.start2}
@@ -168,7 +152,7 @@ function Professional() {
 
         <TextField
           id="outlined-basic"
-          label="End MM/YYYY"
+          label="End Date"
           name="end2"
           variant="outlined"
           defaultValue={content.professional.end2}
@@ -180,37 +164,20 @@ function Professional() {
         <TextField
           id="outlined-basic"
           label="Description"
-          name="desc2[0]"
+          name="desc2"
           variant="outlined"
-          defaultValue={content.professional.desc2[0]}
+          multiline
+          rows={7}
+          defaultValue={content.professional.desc2}
           inputRef={register}
           // onChange={handleSubmit(onSubmit)}
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
         />
-        <TextField
-          id="outlined-basic"
-          label="Description"
-          name="desc2[1]"
-          variant="outlined"
-          defaultValue={content.professional.desc2[1]}
-          inputRef={register}
-          // onChange={handleSubmit(onSubmit)}
-          style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Description"
-          name="desc2[2]"
-          variant="outlined"
-          defaultValue={content.professional.desc2[2]}
-          inputRef={register}
-          // onChange={handleSubmit(onSubmit)}
-          style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
-        />
-
+       
         <Button
+           onClick={handleClick}
+           color={flag ? "primary" : "secondary"}
           variant="contained"
-          color="secondary"
           type="submit"
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
         >

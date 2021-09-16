@@ -4,6 +4,7 @@ import ProfessionalP from "./ProfessionalP";
 import EducationP from "./EducationP";
 import AdditionalSkillsP from "./AdditionalSkillsP";
 import ProjectP from "./ProjectP";
+import CustomP from "./CustomP";
 
 function Paper() {
   return (
@@ -14,6 +15,7 @@ function Paper() {
         <EducationP />
         <AdditionalSkillsP />
         <ProjectP />
+        <CustomP />
       </div>
     </div>
   );

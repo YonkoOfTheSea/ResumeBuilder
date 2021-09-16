@@ -20,10 +20,11 @@ body {
   width: 75vw;
   min-height: 100vh;
   font-family: "Lora", serif;
+  
 }
 
 .right p {
-  margin: 0;
+  padding: 10px;
 }
 
 .right .page {

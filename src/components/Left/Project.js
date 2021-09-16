@@ -9,7 +9,7 @@ function Project() {
   const { content, updateProjectData, removeFakeData } = useContext(
     ResumeContext
   );
-  const [btnText, setBtnText] = useState("Add");
+  const [btnText, setBtnText] = useState("Save");
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
@@ -17,6 +17,13 @@ function Project() {
     updateProjectData(data);
     setBtnText("Update");
   };
+
+  const [flag, setFlag] = useState(true);
+
+  const handleClick = () => {
+    setFlag(!flag);
+  };
+
   return (
     <div className="">
       <h2>Project</h2>
@@ -51,7 +58,7 @@ function Project() {
 
         <TextField
           id="outlined-basic"
-          label="Start MM/YYYY"
+          label="Start Date"
           name="start1"
           variant="outlined"
           defaultValue={content.project.start1}
@@ -62,7 +69,7 @@ function Project() {
 
         <TextField
           id="outlined-basic"
-          label="End MM/YYYY"
+          label="End Date"
           name="end1"
           variant="outlined"
           defaultValue={content.project.end1}
@@ -74,39 +81,16 @@ function Project() {
         <TextField
           id="outlined-basic"
           label="Description"
-          name="desc1[0]"
+          name="desc3"
           variant="outlined"
-          defaultValue={content.project.desc1[0]}
+          multiline
+          rows={7}
+          defaultValue={content.project.desc3}
           inputRef={register}
           // onChange={handleSubmit(onSubmit)}
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
         />
-        <TextField
-          id="outlined-basic"
-          label="Description"
-          name="desc1[1]"
-          variant="outlined"
-          defaultValue={content.project.desc1[1]}
-          inputRef={register}
-          // onChange={handleSubmit(onSubmit)}
-          style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Description"
-          name="desc1[2]"
-          variant="outlined"
-          defaultValue={content.project.desc1[2]}
-          inputRef={register}
-          // onChange={handleSubmit(onSubmit)}
-          style={{
-            marginTop: 12,
-            marginLeft: 8,
-            marginRight: 8,
-            marginBottom: 15,
-          }}
-        />
-
+        
         <hr />
 
         <h4>Project 2</h4>
@@ -136,7 +120,7 @@ function Project() {
 
         <TextField
           id="outlined-basic"
-          label="Start MM/YYYY"
+          label="Start Date"
           name="start2"
           variant="outlined"
           defaultValue={content.project.start2}
@@ -147,7 +131,7 @@ function Project() {
 
         <TextField
           id="outlined-basic"
-          label="End MM/YYYY"
+          label="End Date"
           name="end2"
           variant="outlined"
           defaultValue={content.project.end2}
@@ -159,37 +143,20 @@ function Project() {
         <TextField
           id="outlined-basic"
           label="Description"
-          name="desc2[0]"
+          name="desc4"
           variant="outlined"
-          defaultValue={content.project.desc2[0]}
+          multiline
+          rows={7}
+          defaultValue={content.project.desc4}
           inputRef={register}
           // onChange={handleSubmit(onSubmit)}
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
         />
-        <TextField
-          id="outlined-basic"
-          label="Description"
-          name="desc2[1]"
-          variant="outlined"
-          defaultValue={content.project.desc2[1]}
-          inputRef={register}
-          // onChange={handleSubmit(onSubmit)}
-          style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Description"
-          name="desc2[2]"
-          variant="outlined"
-          defaultValue={content.project.desc2[2]}
-          inputRef={register}
-          // onChange={handleSubmit(onSubmit)}
-          style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
-        />
-
+        
         <Button
           variant="contained"
-          color="secondary"
+          onClick={handleClick}
+          color={flag ? "primary" : "secondary"}
           type="submit"
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
         >

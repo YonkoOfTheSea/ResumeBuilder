@@ -36,10 +36,11 @@ function Right() {
     localStorage.clear();
     setContent({
       header: {},
-      professional: { desc1: ["", "", ""], desc2: ["", "", ""] },
+      professional: {},
       education: {},
       additional: [],
-      project:{ desc1: ["", "", ""], desc2: ["", "", ""] },
+      project:{},
+      custom: {},
     });
   };
   const handleSaveToPDF = (event) => {

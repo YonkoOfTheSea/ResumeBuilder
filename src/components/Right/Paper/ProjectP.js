@@ -25,21 +25,27 @@ function ProjectP() {
     );
   }
 
-  let bulletProject1 = contentUse.project.desc1.map((el, index) => {
-    if (el === "") {
-      return "";
-    } else {
-      return <li key={index}>{el}</li>;
-    }
-  });
+  let bulletProject1;
+  if (!contentUse.project.desc3) {
+    bulletProject1 = "";
+  } else {
+    bulletProject1 = (
+      <ul>
+        <li>{contentUse.project.desc3}</li>
+      </ul>
+    );
+  }
 
-  let bulletProject2 = contentUse.project.desc2.map((el, index) => {
-    if (el === "") {
-      return "";
-    } else {
-      return <li key={index}>{el}</li>;
-    }
-  });
+  let bulletProject2;
+  if (!contentUse.project.desc4) {
+    bulletProject2 = "";
+  } else {
+    bulletProject2 = (
+      <ul>
+        <li>{contentUse.project.desc4}</li>
+      </ul>
+    );
+  }
 
   return (
     <div className={classes.professionalResume}>
@@ -62,7 +68,7 @@ function ProjectP() {
           {contentUse.project.start2}{" "}
           {contentUse.project.end2}
         </p>
-        <ul>{bulletProject2}</ul>
+        {bulletProject2}
       </div>
     </div>
   );

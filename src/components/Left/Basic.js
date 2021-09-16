@@ -4,6 +4,7 @@ import Professional from "./Professional";
 import Education from "./Education";
 import AdditionalSkills from "./AdditionalSkills";
 import Project from "./Project";
+import Custom from "./Custom";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import myClasses from "./Left.module.css";
@@ -133,6 +134,13 @@ function Left() {
             >
               Proj
             </Button>
+            <Button
+              className={classes.headerLink}
+              component={Link}
+              to="/basic/custom"
+            >
+              Custom
+            </Button>
           </div>
           <div>
             <hr className={myClasses.hr} />
@@ -154,6 +162,9 @@ function Left() {
                 </Route>
                 <Route path="/basic/project">
                   <Project />
+                </Route>
+                <Route path="/basic/custom">
+                  <Custom />
                 </Route>
               </Switch>
             </div>

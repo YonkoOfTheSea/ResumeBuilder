@@ -17,21 +17,14 @@ const data = {
     position1: "Manager",
     start1: "Jan/2015",
     end1: "Apr/2020",
-    desc1: [
-      "Responsible for all the material handled by blablabla.",
-      "Help others on their daily tasks.",
-      "Professional photographer hired by others companies.",
-    ],
+    desc1: "hsfjdkf",
+
     company2: "GumGum Productions",
     local2: "Albany, NY, USA",
     position2: "Intern",
     start2: "Jul/2012",
     end2: "Dec/2014",
-    desc2: [
-      "Print and fax documents for the entire company.",
-      "Assist CEO on daily tasks.",
-      "Provide assistance to all employees.",
-    ],
+    desc2:"bnxcmxvcb",
   },
   education: {
     institution: "New Candles University",
@@ -45,20 +38,16 @@ const data = {
     link1: "Salt Lake City, UT, USA",
     start1: "Jan/2015",
     end1: "Apr/2020",
-    desc1: [
-      "Responsible for all the material handled by blablabla.",
-      "Help others on their daily tasks.",
-      "Professional photographer hired by others companies.",
-    ],
+    desc3:"nfkslg",
+
     project2: "GumGum Productions",
     link2: "https://",
     start2: "Jul/2012",
     end2: "Dec/2014",
-    desc2: [
-      "Print and fax documents for the entire company.",
-      "Assist CEO on daily tasks.",
-      "Provide assistance to all employees.",
-    ],
+    desc4: "dfnafkmald",
+  },
+  custom: {
+    info: "adfafasf",
   },
   additional: [
     "5+ years of experience with Microsoft Office",
@@ -67,7 +56,6 @@ const data = {
     "Interpersonal Communication",
     "Friend of all",
   ],
- 
 };
 
 export default data;

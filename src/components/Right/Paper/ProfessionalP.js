@@ -25,21 +25,27 @@ function ProfessionalP() {
     );
   }
 
-  let bulletProfessional1 = contentUse.professional.desc1.map((el, index) => {
-    if (el === "") {
-      return "";
-    } else {
-      return <li key={index}>{el}</li>;
-    }
-  });
+  let bulletProfessional1;
+  if (!contentUse.professional.desc1) {
+    bulletProfessional1 = "";
+  } else {
+    bulletProfessional1 = (
+      <ul>
+        <li>{contentUse.professional.desc1}</li>
+      </ul>
+    );
+  }
 
-  let bulletProfessional2 = contentUse.professional.desc2.map((el, index) => {
-    if (el === "") {
-      return "";
-    } else {
-      return <li key={index}>{el}</li>;
-    }
-  });
+  let bulletProfessional2;
+  if (!contentUse.professional.desc2) {
+    bulletProfessional2 = "";
+  } else {
+    bulletProfessional2 = (
+      <ul>
+        <li>{contentUse.professional.desc2}</li>
+      </ul>
+    );
+  }
 
   return (
     <div className={classes.professionalResume}>

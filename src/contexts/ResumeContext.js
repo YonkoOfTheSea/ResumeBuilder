@@ -8,10 +8,11 @@ const ResumeContextProvider = (props) => {
   const [content, setContent] = useState(
     JSON.parse(localStorage.getItem("dataLocal")) || {
       header: {},
-      professional: { desc1: ["", "", ""], desc2: ["", "", ""] },
+      professional: {},
       education: {},
-      project: { desc1: ["", "", ""], desc2: ["", "", ""] },
+      project: {},
       additional: [],
+      custom: {},
     }
   );
 
@@ -36,6 +37,10 @@ const ResumeContextProvider = (props) => {
     setContent({ ...content, project: data });
   }
 
+  function updateCustomData(data) {
+    setContent({ ...content, custom: data });
+  }
+
   function updateAdditionalData(data) {
     setContent({ ...content, additional: Object.values(data) }); //Converting the object to an Array in order to iterate in AdditionalSkillsP.js
   }
@@ -49,10 +54,11 @@ const ResumeContextProvider = (props) => {
     setControl(false);
     setContentFake({
       header: {},
-      professional: { desc1: ["", "", ""], desc2: ["", "", ""] },
+      professional: {},
       education: {},
-      project: { desc1: ["", "", ""], desc2: ["", "", ""] },
+      project: {},
       additional: [],
+      custom: {},
     });
   }
   useEffect(() => {
@@ -71,6 +77,7 @@ const ResumeContextProvider = (props) => {
         updateEducationData,
         updateAdditionalData,
         updateProjectData,
+        updateCustomData,
         addFakeData,
         removeFakeData,
       }}

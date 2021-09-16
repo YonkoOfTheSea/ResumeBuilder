@@ -9,7 +9,7 @@ function AdditionalSkills() {
   const { content, updateAdditionalData, removeFakeData } = useContext(
     ResumeContext
   );
-  const [btnText, setBtnText] = useState("Add");
+  const [btnText, setBtnText] = useState("Save");
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
@@ -17,6 +17,13 @@ function AdditionalSkills() {
     updateAdditionalData(data);
     setBtnText("Update");
   };
+
+  const [flag, setFlag] = useState(true);
+
+  const handleClick = () => {
+    setFlag(!flag);
+  };
+
 
   return (
     <div className="">
@@ -89,7 +96,8 @@ function AdditionalSkills() {
 
         <Button
           variant="contained"
-          color="secondary"
+          onClick={handleClick}
+          color={flag ? "primary" : "secondary"}
           type="submit"
           style={{ marginTop: 12, marginLeft: 8, marginRight: 8 }}
         >
