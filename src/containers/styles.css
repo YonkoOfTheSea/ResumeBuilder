@@ -12,7 +12,7 @@ body {
 
 .left {
   background-color: #fff;
-  width: 25vw;
+  width: 35vw;
   box-shadow: 0 0 0.5cm #7b7d7d;
 }
 
@@ -34,7 +34,7 @@ body {
   margin-bottom: 0.5cm;
   box-shadow: 0 0 0.5cm #7b7d7d;
   width: 21cm;
-  height: 29.7cm;
+  height: 35cm;
 }
 
 @media print {

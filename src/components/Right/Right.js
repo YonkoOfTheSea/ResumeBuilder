@@ -39,7 +39,7 @@ function Right() {
       professional: { desc1: ["", "", ""], desc2: ["", "", ""] },
       education: {},
       additional: [],
-      project:{},
+      project:{ desc1: ["", "", ""], desc2: ["", "", ""] },
     });
   };
   const handleSaveToPDF = (event) => {
